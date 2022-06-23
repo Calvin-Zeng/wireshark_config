@@ -1,0 +1,9 @@
+"802.11 Mgmt : Probe Request" wlan.fc.type_subtype == 0x0004
+"802.11 Mgmt : Probe Response" wlan.fc.type_subtype == 0x0005
+"802.11 Mgmt : Beacon Frame" wlan.fc.type_subtype == 0x0008
+"802.11 Mgmt : Authentication" wlan.fc.type_subtype == 0x000b
+"802.11 Mgmt : Association Request" wlan.fc.type_subtype == 0x0000
+"802.11 Mgmt : Association Response" wlan.fc.type_subtype == 0x0001
+"802.11 Mgmt : Deauthentication" wlan.fc.type_subtype == 0x000c
+"802.11 Mgmt : Disassociate" wlan.fc.type_subtype == 0x000a
+"802.11 Mgm: (No beacon/probe resp/null/ba)" (wlan.ta ==  ap_2.4g_vap_mac || wlan.ta ==  ap_5g_vap_mac || wlan.ta ==  sta_mac) && !wlan.fc.type_subtype == 0x0005 && !wlan.fc.type_subtype == 0x0008 && !wlan.fc.type_subtype == 0x0019 && !wlan.fc.type_subtype == 0x0024

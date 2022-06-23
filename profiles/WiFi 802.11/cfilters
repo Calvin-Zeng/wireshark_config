@@ -1,0 +1,8 @@
+"SourceAddress" wlan addr2 E8:1B:69:2A:E8:AE
+"DestinationAddress" wlan addr1 E8:1B:69:2A:E8:AE
+"Source & DestinationAddress" wlan addr2 (E8:1B:69:2A:E8:AE || 7E:5E:90:5F:33:40) && wlan addr1 (E8:1B:69:2A:E8:AE || 7E:5E:90:5F:33:40 || FF:FF:FF:FF:FF:FF)
+"802.11 Mgmt" wlan type mgt && wlan addr2 E8:1B:69:2A:E8:AE
+"----------------------------------------" ------------------------------------------------------------------------------------------------------------------------------
+"802.11 Mgmt:Sample" wlan type mgt and (subtype probe-req ||  subtype probe-resp || subtype beacon || subtype auth || subtype assoc-req || subtype assoc-resp || subtype deauth || subtype disassoc )
+"Reference" https://www.tcpdump.org/manpages/pcap-filter.7.html
+"Reference" http://wifinigel.blogspot.com/2018/04/wireshark-capture-filters-for-80211.html
