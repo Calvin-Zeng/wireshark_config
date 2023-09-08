@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 3.2.3.
+# Recent settings file for Wireshark 3.6.0.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -28,6 +28,10 @@ gui.tree_view_show: TRUE
 # Byte view show (hide).
 # TRUE or FALSE (case-insensitive).
 gui.byte_view_show: TRUE
+
+# Packet diagram show (hide).
+# TRUE or FALSE (case-insensitive).
+gui.packet_diagram_show: TRUE
 
 # Statusbar show (hide).
 # TRUE or FALSE (case-insensitive).
@@ -61,13 +65,21 @@ gui.bytes_view: HEX
 # One of: FROM_PACKET, ASCII, EBCDIC
 gui.bytes_encoding: FROM_PACKET
 
+# Packet diagram field values show (hide).
+# TRUE or FALSE (case-insensitive).
+gui.packet_diagram_field_values: FALSE
+
+# Allow hover selection in byte view.
+# TRUE or FALSE (case-insensitive).
+gui.allow_hover_selection: TRUE
+
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 395
+gui.geometry_main_upper_pane: 234
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 338
+gui.geometry_main_lower_pane: 201
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -91,6 +103,9 @@ gui.endpoint_tabs:
 # For RLC stats, whether to use RLC PDUs found inside MAC frames.
 # TRUE or FALSE (case-insensitive).
 gui.rlc_pdus_from_mac_frames: FALSE
+
+# Last directory navigated to in File Open dialog.
+gui.fileopen_remembered_dir: D:\Downloads\
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
