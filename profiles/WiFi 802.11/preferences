@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 3.6.0.
+# Configuration file for Wireshark 3.6.3.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -244,14 +244,17 @@
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %Gt
+gui.column.hidden: %Tt,%Gt
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
 gui.column.format: 
 	"No.", "%m",
 	"Time", "%t",
+	"Delta Time", "%Tt",
 	"Delta time displayed", "%Gt",
+	"HSA", "%hs",
+	"HDA", "%hd",
 	"Source", "%s",
 	"Destination", "%d",
 	"Signal (dBm)", "%Cus:wlan_radio.signal_dbm:0:R",
@@ -2367,6 +2370,11 @@ nameres.mac_name: FALSE
 # TRUE or FALSE (case-insensitive)
 #icmp.favor_icmp_mpls: FALSE
 
+# Length of the Link Address Field, configurable in '101 and absent in '104
+# One of: 0 octet, 1 octet, 2 octet
+# (case-insensitive).
+#iec60870_101.linkaddr_len: 1 octet
+
 # Length of the Cause of Transmission Field, configurable in '101 and fixed at 2 octets with '104
 # One of: 1 octet, 2 octet
 # (case-insensitive).
@@ -2378,7 +2386,7 @@ nameres.mac_name: FALSE
 #iec60870_101.asdu_addr_len: 1 octet
 
 # Length of the Information Object Address Field, configurable in '101 and fixed at 3 octets with '104
-# One of: 2 octet, 3 octet
+# One of: 1 octet, 2 octet, 3 octet
 # (case-insensitive).
 #iec60870_101.asdu_ioa_len: 2 octet
 
